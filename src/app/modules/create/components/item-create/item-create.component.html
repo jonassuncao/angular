@@ -1,1 +1,37 @@
-<p>item-create works!</p>
+<form class="container" novalidate (submit)="onSave(item)">
+  <div class="row">
+    <div class="col-3">
+      <div class="form-group">
+        <label>Código</label>
+        <input
+          type="text"
+          name="codigo"
+          autocomplete="off"
+          [(ngModel)]="item.code"
+          class="form-control mb-3"
+          placeholder="Cod 1, Cod 2..."
+        />
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="form-group">
+        <label>Nome</label>
+        <input
+          type="text"
+          name="name"
+          autocomplete="off"
+          [(ngModel)]="item.name"
+          class="form-control mb-3"
+          placeholder="Item 1, Item 2..."
+        />
+      </div>
+    </div>
+    <div class="col">
+      <i class="user">Cadastrado por: {{ usuario.username | uppercase }}</i>
+    </div>
+  </div>
+  <hr />
+  <div class="col d-grid">
+    <button type="submit" class="btn btn-success">Salvar</button>
+  </div>
+</form>

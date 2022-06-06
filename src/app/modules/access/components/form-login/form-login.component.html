@@ -7,6 +7,7 @@
         <input
           type="text"
           name="username"
+          autocomplete="off"
           [(ngModel)]="user.username"
           class="form-control mb-3"
           placeholder="example@email.com"
@@ -15,9 +16,10 @@
       <div class="form-group">
         <label>Senha</label>
         <input
-          name="password"
-          [(ngModel)]="user.password"
           type="password"
+          name="password"
+          autocomplete="off"
+          [(ngModel)]="user.password"
           class="form-control"
           placeholder="******"
         />
