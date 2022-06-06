@@ -1,0 +1,25 @@
+<div class="container">
+  <ng-container *ngIf="hasItems(); else emptyItem">
+    <div class="row">
+      <div class="col"><b>Código</b></div>
+      <div class="col item-name"><b>Nome</b></div>
+    </div>
+    <hr />
+    <div class="row" *ngFor="let item of items">
+      <div class="col">{{ item.code }}</div>
+      <div class="col item-name">{{ item.name }}</div>
+    </div>
+  </ng-container>
+
+  <hr />
+  <div class="col d-grid">
+    <a [routerLink]="['/home/create']" class="btn btn-primary">
+      Adicionar item
+    </a>
+  </div>
+</div>
+<ng-template #emptyItem>
+  <div class="row">
+    <div class="col"><i>Lista de itens vazia!</i></div>
+  </div>
+</ng-template>

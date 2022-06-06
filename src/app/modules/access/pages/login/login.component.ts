@@ -6,6 +6,7 @@ import { UserService } from 'src/app/core/service/user.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
   constructor(private router: Router, private userService: UserService) {}
